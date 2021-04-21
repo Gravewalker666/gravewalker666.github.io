@@ -567,6 +567,12 @@ video {
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .space-y-5 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
@@ -579,6 +585,10 @@ video {
 
 .rounded-full {
   border-radius: 9999px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .inline-block {
@@ -615,6 +625,10 @@ video {
 
 .h-32 {
   height: 8rem;
+}
+
+.h-screen {
+  height: 100vh;
 }
 
 .text-xs {
@@ -711,14 +725,6 @@ video {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.col-span-2 {
-  grid-column: span 2 / span 2;
-}
-
-.col-span-6 {
-  grid-column: span 6 / span 6;
-}
-
 @-webkit-keyframes spin {
   to {
     transform: rotate(360deg);
@@ -789,12 +795,28 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:hidden {
+    display: none;
+  }
+
+  .md\:overflow-hidden {
+    overflow: hidden;
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .md\:grid-cols-8 {
     grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+
+  .md\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
+  .md\:col-span-6 {
+    grid-column: span 6 / span 6;
   }
 }
 
