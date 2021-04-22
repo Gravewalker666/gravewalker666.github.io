@@ -11,6 +11,7 @@
         <body>
             <div class="container p-10 mx-auto h-screen md:overflow-hidden">
                 <div class="grid grid-cols-1 md:grid-cols-8 gap-12">
+                    <!-- First main column with profile card -->
                     <div class="md:col-span-2 space-y-4">
                         <figure class="bg-white-100 rounded-xl p-8 shadow">
                           <img class="w-32 h-32 rounded-full mx-left" src="https://avatars.githubusercontent.com/u/45477334?v=4" alt="profile picture" width="384" height="512" />
@@ -50,14 +51,48 @@
                           </div>
                         </figure>
                     </div>
+                    <!-- Second column with navigation -->
                     <div class="md:col-span-6 space-y-4">
+                        <!-- Navigation bar -->
                         <div id="navigation" class="hidden md:block space-x-4">
-                            <p id="nav-education" class="text-5xl font-bold inline-block cursor-pointer nav-item">EXPERIENCE AND EDUCATION</p>
-                            <p id="nav-projects" class="text-sm inline-block cursor-pointer nav-item">PROJECTS</p>
+                            <p id="nav-projects" class="text-5xl font-bold inline-block cursor-pointer nav-item">PROJECTS</p>
+                            <p id="nav-education" class="text-sm inline-block cursor-pointer nav-item">EXPERIENCE AND EDUCATION</p>
                             <p id="nav-blogs" class="text-sm inline-block cursor-pointer nav-item">BLOGS</p>
                             <p id="nav-videos" class="text-sm inline-block cursor-pointer nav-item">VIDEOS</p>
                         </div>
-                        <div id="education" class="section-x">
+                        <!-- Dynamic sections -->
+                        <div class="section-x" id="projects">
+                            <p class="text-5xl font-bold md:hidden">PROJECTS</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 space-x-2 pt-6">
+                                <div class="bg-gray-900 rounded-lg p-8 text-white space-y-5">
+                                    <p class="text-xl font-semibold">ScholarX - Sustainable Education Foundation</p>
+                                    <p class="text-sm">
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+                                    </p>
+                                    <div>
+                                        <img src="assets/react-logo.png" title="react" alt="react" class="rounded-full h-7 w-7 inline-block">
+                                        <img src="assets/typescript-logo.jpg" title="typescript" alt="typescript" class="rounded-full h-7 w-7 inline-block">
+                                        <img src="assets/spring-logo.png" title="spring-boot" alt="spring-boot" class="rounded-full h-7 w-7 inline-block">
+                                        <img src="assets/java-logo.jpg" title="java" alt="java" class="rounded-full h-7 w-7 inline-block">
+                                        <img src="assets/docker-logo.jpg" title="docker" alt="docker" class="rounded-full h-7 w-7 inline-block">
+                                        <img src="assets/kubernetes-logo.png" title="kubernetes" alt="kubernetes" class="rounded-full h-7 w-7 inline-block">
+                                        <img src="assets/javascript-logo.jpg" title="javascript" alt="javascript" class="rounded-full h-7 w-7 inline-block">
+                                        <img src="assets/html-logo.jpg" title="html" alt="html" class="rounded-full h-7 w-7 inline-block">
+                                        <img src="assets/css-logo.jpg" title="css" alt="css" class="rounded-full h-7 w-7 inline-block">
+                                        <img src="assets/php-logo.jpg" title="php" alt="php" class="rounded-full h-7 w-7 inline-block">
+                                    </div>
+                                    <div class="space-x-2 text-xs text-blue-300">
+                                        <a class="inline-block" href="https://github.com/gravewalker666" target="_blank">
+                                            GitHub Repository
+                                        </a>
+                                        <a class="inline-block" href="https://linkedin.com/in/heshan-andrews" target="_blank">
+                                            Live Deployment
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:hidden section-x" id="education">
                             <p class="text-5xl font-bold md:hidden">EXPERIENCE AND EDUCATION</p>
                             <div class="grid grid-cols-1 md:grid-cols-2">
                                 <div class="pt-6 space-y-2">
@@ -135,9 +170,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="md:hidden section-x" id="projects">
-                            <p class="text-5xl font-bold md:hidden">PROJECTS</p>
                         </div>
                         <div class="md:hidden section-x" id="blogs">
                             <p class="text-5xl font-bold md:hidden">BLOGS</p>

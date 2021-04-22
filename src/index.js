@@ -10,7 +10,6 @@ $(document).ready(function () {
 })
 
 function changeScene(sectionId) {
-    console.log(sectionId);
     $(".section-x").addClass("md:hidden");
     $("#" + sectionId).removeClass("md:hidden");
 }
