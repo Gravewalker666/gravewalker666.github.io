@@ -9,11 +9,11 @@
             <link rel="stylesheet" href="styles.css" />
         </head>
         <body>
-            <div class="container p-10 mx-auto h-screen md:overflow-hidden">
+            <div class="container p-10 mx-auto h-screen">
                 <div class="grid grid-cols-1 md:grid-cols-8 gap-12">
                     <!-- First main column with profile card -->
                     <div class="md:col-span-2 space-y-4">
-                        <figure class="bg-white-100 rounded-xl p-8 shadow">
+                        <figure class="bg-white rounded-xl p-8 mt-3 shadow sticky top-4">
                           <img class="w-32 h-32 rounded-full mx-left" src="https://avatars.githubusercontent.com/u/45477334?v=4" alt="profile picture" width="384" height="512" />
                           <div class="pt-6 text-left space-y-4">
                             <blockquote>
@@ -54,7 +54,7 @@
                     <!-- Second column with navigation -->
                     <div class="md:col-span-6 space-y-4">
                         <!-- Navigation bar -->
-                        <div id="navigation" class="hidden md:block space-x-4">
+                        <div id="navigation" class="hidden md:block space-x-4 sticky top-0 pt-3 pb-2 bg-white">
                             <p id="nav-projects" class="text-5xl font-bold inline-block cursor-pointer nav-item">PROJECTS</p>
                             <p id="nav-education" class="text-sm inline-block cursor-pointer nav-item">EXPERIENCE AND EDUCATION</p>
                             <p id="nav-blogs" class="text-sm inline-block cursor-pointer nav-item">BLOGS</p>
