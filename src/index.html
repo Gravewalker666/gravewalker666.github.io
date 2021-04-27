@@ -14,8 +14,16 @@
                     <!-- First main column with profile card -->
                     <div class="md:col-span-2 space-y-4">
                         <div class="sticky top-4">
-                            <figure class="bg-white rounded-xl p-8 mt-3 shadow-xl">
+                            <figure class="bg-white rounded-xl p-8 mt-3 shadow-xl relative">
                                 <img class="w-32 h-32 rounded-full mx-left" src="https://avatars.githubusercontent.com/u/45477334?v=4" alt="profile picture" width="384" height="512" />
+                                <div class="inline-block absolute top-6 right-4 text-blue-300 hidden md:block">
+                                    <div class="w-7 h-7 bg-gray-900 rounded-full text-center inline-block items-center">
+                                        <p id="right-arrow" class="cursor-pointer">&lt;/</p>
+                                    </div>
+                                    <div class="w-7 h-7 bg-gray-900 rounded-full text-center inline-block items-center">
+                                        <p id="left-arrow" class="cursor-pointer">/&gt;</p>
+                                    </div>
+                                </div>
                                 <div class="pt-6 text-left space-y-4">
                                     <blockquote>
                                         <p class="text-lg font-semibold">
@@ -52,8 +60,8 @@
                                 </div>
                             </figure>
                             <figure class="bg-gray-900 text-white rounded-xl p-8 mt-5 text-center justify-center">
-                                <p class="text-5xl font-bold">"<span class="text-blue-300">Software</span></p>
-                                <p class="text-5xl font-bold">is a great combination between artistry and engineering"</p>
+                                <p class="text-sm sm:text-base xl:text-2xl 2xl:text-5xl font-bold">"<span class="text-blue-300">Software</span></p>
+                                <p class="text-sm sm:text-base xl:text-2xl 2xl:text-5xl font-bold">is a great combination between artistry and engineering"</p>
                                 <p class="text-blue-300 text-right mt-5">&lt; Bill Gates /&gt;</p>
                             </figure>
                         </div>
