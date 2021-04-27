@@ -882,6 +882,10 @@ video {
   color: rgba(29, 78, 216, var(--tw-text-opacity));
 }
 
+.underline {
+  text-decoration: underline;
+}
+
 .break-words {
   overflow-wrap: break-word;
 }
