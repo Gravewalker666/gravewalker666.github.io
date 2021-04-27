@@ -11,7 +11,7 @@ $(document).ready(function () {
 
     $("#right-arrow").click(function () {
         let sectionId = $(".nav-item.text-5xl.font-bold").attr('id');
-        let nextSectionIdIndex = (navIdArray.indexOf(sectionId) + 7)%4;
+        let nextSectionIdIndex = (navIdArray.indexOf(sectionId) + 3)%4;
         $(".nav-item").removeClass("text-5xl font-bold");
         $("#" + navIdArray[nextSectionIdIndex]).addClass("text-5xl font-bold");
         changeScene(navIdArray[nextSectionIdIndex]);
