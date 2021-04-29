@@ -202,7 +202,8 @@ select { /* 1 */
 Correct the inability to style clickable types in iOS and Safari.
 */
 
-button {
+button,
+[type='button'] {
   -webkit-appearance: button;
 }
 
@@ -687,6 +688,10 @@ video {
   height: 1.75rem;
 }
 
+.h-11 {
+  height: 2.75rem;
+}
+
 .h-16 {
   height: 4rem;
 }
@@ -922,10 +927,6 @@ video {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.duration-75 {
-  transition-duration: 75ms;
-}
-
 @-webkit-keyframes spin {
   to {
     transform: rotate(360deg);
@@ -995,6 +996,11 @@ video {
 .animate-ping {
   -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
           animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.animate-bounce {
+  -webkit-animation: bounce 1s infinite;
+          animation: bounce 1s infinite;
 }
 
 @media (min-width: 640px) {
