@@ -22,6 +22,7 @@ $(document).ready(function () {
     });
 
     getPlaylist();
+    getBlogs();
 })
 
 function changeScene(navbarId) {
@@ -104,4 +105,22 @@ function getDuration (duration) {
         processedDurationStr += n;
     })
     return processedDurationStr;
+}
+
+function getBlogs () {
+    $.ajax({
+        type: 'get',
+        url: 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@andrewsgravewalker',
+        dataType: 'json',
+        success: function (data) {
+            data.items.forEach(item => {
+                item.content = item.content.replace(/<[^>]*>?/gm, "").substring(0, 500);
+                item.content = item.content.replace(/Continue reading on Medium »/g, "");
+                item.content = item.content.replace(/Photo by Pat Whelen on Unsplash/g, "");
+                item.content += "...";
+            });
+            let items = Mustache.render($("#blog-card").html(), {item: data.items});
+            $("#blog-container").html(items);
+        }
+    });
 }
