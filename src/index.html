@@ -17,10 +17,10 @@
                             <figure class="bg-white rounded-xl p-8 mt-3 shadow-xl relative">
                                 <img class="w-32 h-32 rounded-full mx-left" src="https://avatars.githubusercontent.com/u/45477334?v=4" alt="profile picture" width="384" height="512" />
                                 <div class="inline-block absolute top-6 right-4 text-blue-300 hidden md:block">
-                                    <div class="w-7 h-7 bg-gray-900 rounded-full text-center inline-block items-center">
+                                    <div id="right-arrow-wrapper" class="w-7 h-7 bg-gray-900 rounded-full text-center inline-block items-center animate-bounce">
                                         <p id="right-arrow" class="cursor-pointer">&lt;/</p>
                                     </div>
-                                    <div class="w-7 h-7 bg-gray-900 rounded-full text-center inline-block items-center">
+                                    <div id="left-arrow-wrapper" class="w-7 h-7 bg-gray-900 rounded-full text-center inline-block items-center animate-bounce">
                                         <p id="left-arrow" class="cursor-pointer">/&gt;</p>
                                     </div>
                                 </div>
@@ -383,8 +383,8 @@
                                     <div name="command-3">
                                         <p class="inline-block">andrewsgravewalker@medium :~<span class="text-green-300">$</span></p>
                                         <div class="inline-block relative">
-                                            <div class="absolute h-4 w-1 bg-blue-300 animate-ping duration-75"></div>
-                                            <div class="h-4 w-1 bg-blue-300 duration-75"></div>
+                                            <div class="absolute h-4 w-1 bg-blue-300 animate-ping"></div>
+                                            <div class="h-4 w-1 bg-blue-300"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -392,26 +392,34 @@
                         </div>
                         <div class="md:hidden section-x" id="videos">
                             <p class="text-5xl font-bold md:hidden">Videos</p>
-                            <div class="grid grid-cols-1 md:grid-cols-3 pt-3">
-                                <div class="relative">
-                                    <img class="shadow rounded-t-xl" src="https://img.youtube.com/vi/LZ76rCwVmH8/maxresdefault.jpg" />
-                                    <div class="bg-gray-900 text-white p-4 rounded-b-xl">
-                                        <p>How the Hell Does it Work? EP: 1 Computer Booting</p>
-                                        <div class="text-blue-300 space-y-2 text-xs">
-                                            <p class="inline-block">6K views &#8226;</p>
-                                            <p class="inline-block">1 month ago</p>
-                                        </div>
-                                    </div>
-                                    <p class="absolute top-2 left-2 bg-gray-900 w-14 text-blue-300 text-xs text-center rounded-xl p-1 text-white">
-                                        32.04
-                                    </p>
-                                </div>
+                            <div id="video-container" class="grid grid-cols-1 md:grid-cols-3 pt-3">
+                                <!-- video gallery goes here -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </body>
-        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="   crossorigin="anonymous"></script>
+        <script type="text/html" id="video-card">
+            {{#item}}
+            <div class="relative mr-3 mb-3">
+                <a href="http://youtube.com/watch?v={{id}}" target="_blank">
+                    <img class="shadow rounded-t-xl" src="{{snippet.thumbnailUrl}}" />
+                    <div class="bg-gray-900 text-white p-4 rounded-b-xl">
+                        <p class="h-11">{{snippet.title}}</p>
+                        <div class="text-blue-300 space-y-2 text-xs">
+                            <p class="inline-block">{{statistics.viewCount}} Views &#8226;</p>
+                            <p class="inline-block">{{snippet.upSince}}</p>
+                        </div>
+                    </div>
+                    <p class="absolute top-2 left-2 bg-gray-900 w-14 text-blue-300 text-xs text-center rounded-xl p-1 text-white">
+                        {{contentDetails.duration}}
+                    </p>
+                </a>
+            </div>
+            {{/item}}
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="index.js"></script>
 </html>
