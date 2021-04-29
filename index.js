@@ -34,7 +34,7 @@ function getPlaylist() {
     let videoIds = []
     $.ajax({
         type: 'get',
-        url: 'http://grave-youtube-niffler.herokuapp.com/playlist?playlistId=PLX0-W_Oj50O53wYM5gVyUqdo2jz47a_QQ',
+        url: 'https://grave-youtube-niffler.herokuapp.com/playlist?playlistId=PLX0-W_Oj50O53wYM5gVyUqdo2jz47a_QQ',
         dataType: 'json',
         success: function (data) {
             data.items.forEach(item => {
@@ -52,7 +52,7 @@ function renderVideos(videoIds) {
     }
     $.ajax({
         type: 'get',
-        url: 'http://grave-youtube-niffler.herokuapp.com/videos?videoIds=' + ids,
+        url: 'https://grave-youtube-niffler.herokuapp.com/videos?videoIds=' + ids,
         dataType: 'json',
         success: function (data) {
             data.items.forEach(item => {
