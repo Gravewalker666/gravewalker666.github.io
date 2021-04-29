@@ -345,8 +345,7 @@
                         </div>
                         <div class="md:hidden section-x" id="blogs">
                             <p class="text-5xl font-bold md:hidden">Blogs</p>
-                            <div id="blog-container" class="grid grid-cols-1 md:grid-cols-2 pt-3">
-
+                            <div id="blog-container" class="pt-3">
                             </div>
                         </div>
                         <div class="md:hidden section-x" id="videos">
@@ -380,41 +379,57 @@
         </script>
         <script type="text/html" id="blog-card">
             {{#item}}
-            <div class="bg-gray-900 rounded-lg p-4 mt-3 mr-3 space-y-2 text-white text-sm">
-                <div class="mb-3">
-                    <div class="w-3 h-3 bg-red-500 rounded-full text-center inline-block"></div>
-                    <div class="w-3 h-3 bg-yellow-300 rounded-full text-center inline-block"></div>
-                    <div class="w-3 h-3 bg-green-500 rounded-full text-center inline-block"></div>
-                </div>
-                <div name="command-1">
-                    <p class="inline-block">andrewsgravewalker@medium :~<span class="text-green-300">$</span></p>
-                    <p class="inline-block"><span class="text-green-300">cat</span> index.article</p>
-                </div>
-                <div name="output-1">
-                    <p>Title: <span class="text-blue-300">"{{title}}"</span></p>
-                    <p>Date: {{pubDate}}</p>
-                    <p>Content:</p>
-                    <p class="text-blue-300">"{{content}}"</p>
-                </div>
-                <div name="command-2">
-                    <p class="inline-block">andrewsgravewalker@medium :~<span class="text-green-300">$</span></p>
-                    <p class="inline-block text-green-300">pwd</p>
-                </div>
-                <div name="output-2">
-                    <a
-                            href="{{link}}"
-                            target="_blank"
-                            class="text-blue-300 break-words underline"
-                    >
-                        medium/andrewsgravewalker/{{title}}
-                    </a>
-                </div>
-                <div name="command-3">
-                    <p class="inline-block">andrewsgravewalker@medium :~<span class="text-green-300">$</span></p>
-                    <div class="inline-block relative">
-                        <div class="absolute h-4 w-1 bg-blue-300 animate-ping"></div>
-                        <div class="h-4 w-1 bg-blue-300"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 p-5 mb-5 bg-gray-100 rounded-xl">
+                <div class="bg-gray-900 rounded-lg p-4 mr-3 mb-3 md:mb-0 space-y-2 text-white text-sm">
+                    <div class="mb-3">
+                        <div class="w-3 h-3 bg-red-500 rounded-full text-center inline-block"></div>
+                        <div class="w-3 h-3 bg-yellow-300 rounded-full text-center inline-block"></div>
+                        <div class="w-3 h-3 bg-green-500 rounded-full text-center inline-block"></div>
                     </div>
+                    <div name="command-1">
+                        <p class="inline-block">andrewsgravewalker@medium :~<span class="text-green-300">$</span></p>
+                        <p class="inline-block"><span class="text-green-300">cat</span> index.article</p>
+                    </div>
+                    <div name="output-1">
+                        <p>Title: <span class="text-blue-300">"{{title}}"</span></p>
+                        <p>Date: {{pubDate}}</p>
+                        <p>Content:</p>
+                        <p class="text-blue-300">"{{content}}"</p>
+                    </div>
+                    <div name="command-2">
+                        <p class="inline-block">andrewsgravewalker@medium :~<span class="text-green-300">$</span></p>
+                        <p class="inline-block text-green-300">pwd</p>
+                    </div>
+                    <div name="output-2">
+                        <a
+                                href="{{link}}"
+                                target="_blank"
+                                class="text-blue-300 break-words underline"
+                        >
+                            medium/andrewsgravewalker/{{title}}
+                        </a>
+                    </div>
+                    <div name="command-3">
+                        <p class="inline-block">andrewsgravewalker@medium :~<span class="text-green-300">$</span></p>
+                        <p class="inline-block"><span class="text-green-300">open</span> thumbnail.png <span class="text-green-300">--app</span> preview</p>
+                    </div>
+                    <div name="command-4">
+                        <p class="inline-block">andrewsgravewalker@medium :~<span class="text-green-300">$</span></p>
+                        <div class="inline-block relative">
+                            <div class="absolute h-4 w-1 bg-blue-300 animate-ping"></div>
+                            <div class="h-4 w-1 bg-blue-300"></div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-gray-900 rounded-t-xl p-4 space-y-2">
+                        <div>
+                            <div class="w-3 h-3 bg-red-500 rounded-full text-center inline-block"></div>
+                            <div class="w-3 h-3 bg-yellow-300 rounded-full text-center inline-block"></div>
+                            <div class="w-3 h-3 bg-green-500 rounded-full text-center inline-block"></div>
+                        </div>
+                    </div>
+                    <img class="rounded-b-xl mr-3 mb-3 md:mb-0 bg-white" src="{{thumbnail}}" />
                 </div>
             </div>
             {{/item}}
