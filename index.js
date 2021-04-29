@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    const navIdArray = ["nav-projects", "nav-education", "nav-blogs", "nav-videos"];
+    const navIdArray = ["nav-projects", "nav-blogs", "nav-videos", "nav-education"];
 
     $("#left-arrow").click(function () {
         $("#left-arrow-wrapper").removeClass("animate-bounce");
