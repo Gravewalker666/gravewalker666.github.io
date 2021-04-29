@@ -346,6 +346,7 @@
                         <div class="md:hidden section-x" id="blogs">
                             <p class="text-5xl font-bold md:hidden">Blogs</p>
                             <div id="blog-container" class="pt-3">
+                                <!-- blog list goes here -->
                             </div>
                         </div>
                         <div class="md:hidden section-x" id="videos">
@@ -364,7 +365,7 @@
                 <a href="http://youtube.com/watch?v={{id}}" target="_blank">
                     <img class="shadow rounded-t-xl" src="{{snippet.thumbnailUrl}}" />
                     <div class="bg-gray-900 text-white p-4 rounded-b-xl">
-                        <p class="h-11 overflow-hidden">{{snippet.title}}</p>
+                        <p class="h-12 overflow-hidden">{{snippet.title}}</p>
                         <div class="text-blue-300 space-y-2 text-xs">
                             <p class="inline-block">{{statistics.viewCount}} Views &#8226;</p>
                             <p class="inline-block">{{snippet.upSince}}</p>
@@ -391,10 +392,10 @@
                         <p class="inline-block"><span class="text-green-300">cat</span> index.article</p>
                     </div>
                     <div name="output-1">
-                        <p>Title: <span class="text-blue-300">"{{title}}"</span></p>
+                        <p>Title: <span class="text-blue-300">{{title}}</span></p>
                         <p>Date: {{pubDate}}</p>
                         <p>Content:</p>
-                        <p class="text-blue-300">"{{content}}"</p>
+                        <p class="text-blue-300">{{content}}</p>
                     </div>
                     <div name="command-2">
                         <p class="inline-block">andrewsgravewalker@medium :~<span class="text-green-300">$</span></p>
