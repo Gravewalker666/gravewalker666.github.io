@@ -21,6 +21,24 @@ $(document).ready(function () {
         changeScene(navIdArray[nextSectionIdIndex]);
     });
 
+    let currentDate = new Date();
+    let sefStartDate = new Date("01 Jun 2019");
+    let years = Math.floor((currentDate - sefStartDate)/(1000*60*60*24*365.25));
+    let months = Math.floor((((currentDate - sefStartDate)%(1000*60*60*24*365.25))/(1000*60*60*24))/31);
+    if (years === 1) {
+        years = years + " Year ";
+    } else {
+        years = years + " Years ";
+    }
+    if (months === 0) {
+      months = " ";
+    } else if (months === 1) {
+        months = months + " Month";
+    } else {
+        months = months + " Months";
+    }
+    $("#sef-years").html(years + months);
+
     getPlaylist();
     getBlogs();
 })
